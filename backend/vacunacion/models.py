@@ -21,7 +21,7 @@ class Paciente(models.Model):
     domicilio = models.CharField(max_length=200)
     telefono = models.CharField(max_length=20)
     sexo = models.CharField(max_length=10)
-    edad = models.IntegerField()
+    edad = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.nombre} {self.apellido}"
