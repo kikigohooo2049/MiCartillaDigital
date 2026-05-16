@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
- 
+
 from datetime import timedelta
 from pathlib import Path
 
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'vacunacion',
     'rest_framework',
     'corsheaders',
-
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -107,6 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'vacunacion.Usuario'
 
 
 # Internationalization
